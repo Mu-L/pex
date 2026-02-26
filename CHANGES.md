@@ -2,10 +2,14 @@
 
 ## 2.90.2
 
+This release fixes bugs resulting from imperfect isolation of Python interpreters by Pex. In
+particular, `sys.path` pollution from items in the `CWD` is mitigated for many common use cases.
+
 This release also updates vendored Pip's vendored certifi's cacert.pem to that from
 certifi 2026.2.25.
 
 * Update vendored Pip's CA cert bundle. (#3108)
+* Further isolate Python interpreters when possible. (#3109)
 
 ## 2.90.1
 
